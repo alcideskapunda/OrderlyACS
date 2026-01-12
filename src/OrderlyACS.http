@@ -1,0 +1,6 @@
+@OrderlyACS_HostAddress = http://localhost:5121
+
+GET {{OrderlyACS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
