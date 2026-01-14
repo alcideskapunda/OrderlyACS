@@ -1,4 +1,5 @@
 using System;
+using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 using OrderlyACS.Domain.Products;
 
@@ -13,6 +14,8 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Ignore<Notification>();
+
         modelBuilder.Entity<Product>()
             .Property(p => p.Name).IsRequired();
         modelBuilder.Entity<Product>()
