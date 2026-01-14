@@ -1,8 +1,9 @@
 using System;
+using Flunt.Notifications;
 
 namespace OrderlyACS.Domain;
 
-public abstract class Entity
+public abstract class Entity : Notifiable<Notification>
 {
     public Entity()
     {
